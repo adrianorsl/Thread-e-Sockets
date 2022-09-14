@@ -28,8 +28,9 @@ public class DistribuirTarefas implements Runnable {
 				String texto = entradaCliente.nextLine();
 				String texto2 = dna.lerLinha2(texto);
 				System.out.println(texto2);
-				PrintStream saida = new PrintStream(socket.getOutputStream());
-				saida.println(texto2);
+				PrintStream saida2 = new PrintStream(socket.getOutputStream());
+				saida2.println(texto2);
+				
 			}
 			
 			entradaCliente.close();

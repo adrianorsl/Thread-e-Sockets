@@ -17,15 +17,15 @@ public class Cliente {
 		
 		Scanner teclado = new Scanner(System.in);
 		PrintStream saida = new PrintStream(socket.getOutputStream());
-		String texto = teclado.nextLine();
-		saida.println(texto);
+
 		
-		teclado.nextLine();
-		
-		Scanner saidaCliente = new Scanner(socket.getInputStream());
-		String saidaTexto = saidaCliente.nextLine();
-		System.out.println(saidaTexto);
-		
+			String texto = teclado.nextLine();
+			saida.println(texto);
+			
+			Scanner saidaCliente = new Scanner(socket.getInputStream());
+			String saidaTexto = saidaCliente.nextLine();
+			System.out.println(saidaTexto);
+
 		
 		saida.close();
 		teclado.close();
